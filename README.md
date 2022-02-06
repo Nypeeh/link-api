@@ -1,5 +1,5 @@
 # LinkAPI
-🚀 Desenvolvida uma integração entre Pipedrive e Bling em Node.js aproveitando diversos conceitos do SOLID, arquitetura DDD e TDD.
+🚀 Desenvolvida uma integração entre Pipedrive e Bling em Node.js implementando diversos conceitos do SOLID, arquitetura DDD e TDD.
 
 # Tecnologias utilizadas
 
