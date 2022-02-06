@@ -9,7 +9,7 @@ import { IBlingReturn } from '../dtos/IBlingResponse'
 export class BlingProvider implements IBlingProvider {
   private readonly apiKey = process.env.BLING_API_KEY
 
-  public async createOrder(blingRequest: IBlingRequest): Promise<void> {
+  public async createOpportunity(blingRequest: IBlingRequest): Promise<void> {
     const xml = convertToXmlBling(blingRequest)
 
     const { data, status: httpStatusCode } = await axios
