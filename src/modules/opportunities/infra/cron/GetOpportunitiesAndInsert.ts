@@ -20,6 +20,7 @@ async function GetOpportunitiesAndInsert() {
   console.log(' == CRON ENDED == GetOpportunitiesAndInsert')
 }
 
-export default cron.schedule('10 * * * *', GetOpportunitiesAndInsert, {
+// Run every 24 hours
+export default cron.schedule('0 */24 * * *', GetOpportunitiesAndInsert, {
   scheduled: false,
 })
