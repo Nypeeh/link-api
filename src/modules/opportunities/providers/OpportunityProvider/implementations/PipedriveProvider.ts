@@ -6,10 +6,11 @@ import { IOpportunityProvider } from '../models/IOpportunityProvider'
 
 export class PipedriveProvider implements IOpportunityProvider {
   private readonly apiKey = process.env.PIPEDRIVE_KEY
+  private readonly linkAPI = process.env.PIPEDRIVE_LINK_API
 
   public async getWonOpportunities(): Promise<IWonOpportunity[]> {
     const { data, status: httpStatusCode } = await axios
-      .get(`${process.env.PIPEDRIVE_LINK_API}/deals`, {
+      .get(`${this.linkAPI}/deals`, {
         params: { api_token: this.apiKey, status: 'won' },
       })
       .catch(error => {
