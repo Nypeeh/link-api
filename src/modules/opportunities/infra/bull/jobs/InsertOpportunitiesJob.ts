@@ -18,8 +18,6 @@ export const InsertOpportunitiesJob: Job = {
   async handle({ data }: { data: IOpportunity[] }) {
     const saveOpportunity = container.resolve(SaveOpportunityService)
 
-    console.log({ data: data })
-
     await Promise.all(
       data.map(async (opportunity: IOpportunity) => {
         await blingProvider

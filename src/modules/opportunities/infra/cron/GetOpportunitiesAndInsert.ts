@@ -14,8 +14,6 @@ async function GetOpportunitiesAndInsert() {
     return
   }
 
-  console.log({ wonOpportunities })
-
   // Register opportunities on Bling
   await Queues.add('InsertOpportunitiesJob', wonOpportunities)
 

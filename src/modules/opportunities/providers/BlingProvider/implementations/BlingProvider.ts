@@ -31,7 +31,5 @@ export class BlingProvider implements IBlingProvider {
         'There was a problem trying to register a request in the bling api',
         500,
       )
-
-    console.log({ passei: 3.5 })
   }
 }
