@@ -22,7 +22,7 @@ export const InsertOpportunitiesJob: Job = {
       data.map(async (opportunity: IOpportunity) => {
         await blingProvider
           .createOpportunity({
-            clientName: opportunity.person_name,
+            clientName: opportunity.title,
             code: opportunity.id,
             description: opportunity.title,
             value: opportunity.value,
