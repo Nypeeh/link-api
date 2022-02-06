@@ -1,0 +1,60 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "LinkAPI Documentation",
+    "description": "This is an API Rest that have an integration with Pipedrive and Bling",
+    "version": "1.0.0",
+    "contact": {
+      "email": "leo_armejo@hotmail.com"
+    }
+  },
+  "paths": {
+    "/opportunities": {
+      "tags": ["Opportunity"],
+      "get": {
+        "summary": "Get opportunities",
+        "description": "Get oppotunities found.",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "items": {
+                "type": "array",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "person_name": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "number"
+                  },
+                  "currency": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "type": "string"
+                  }
+                }
+              }
+
+            }
+          },
+          "400": {
+            "description": "Opportunities not found."
+          }
+        }
+      }
+    }
+  }
+}
