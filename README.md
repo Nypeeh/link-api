@@ -54,6 +54,9 @@ yarn dev:cron / npm run dev:cron
 
 # Executar o Bull (Background Jobs)
 yarn dev:queue / npm run dev:queue
+
+# Executar os testes
+yarn test / npm run test
 ```
 
 # Autor
